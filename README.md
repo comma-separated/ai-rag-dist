@@ -6,7 +6,7 @@ This repository contains installation assets only:
 
 - `install.sh`: Linux installer for the RAG service.
 - `.env.example`: example runtime configuration.
-- GitHub Release assets: Linux binaries and checksums.
+- GitHub Release assets: macOS, Linux, and Windows binaries plus checksums.
 
 The source code is private. Published binaries require a valid license key.
 
@@ -105,8 +105,11 @@ Common variables:
 Each release should publish:
 
 ```text
+rag_darwin_amd64
+rag_darwin_arm64
 rag_linux_amd64
 rag_linux_arm64
+rag_windows_amd64.exe
 checksums.txt
 ```
 
