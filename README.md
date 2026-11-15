@@ -43,7 +43,7 @@ The generated environment file is:
 /etc/rag/default/rag.env
 ```
 
-Edit it after installation if you need to change Ollama, Qdrant, model, retrieval, or API settings.
+Edit it after installation if you need to change LLM endpoints, models, Qdrant, retrieval, or API settings.
 
 Restart the service after configuration changes:
 
@@ -93,9 +93,11 @@ Common variables:
 | `RAG_LICENSE` | empty | License token required by the service. |
 | `RAG_API_KEY` | empty | Optional HTTP API key. Empty disables API key auth. |
 | `RAG_HTTP_ADDR` | `127.0.0.1:8080` | HTTP bind address. |
-| `OLLAMA_URL` | `http://localhost:11434` | Ollama base URL. |
-| `OLLAMA_MODEL_CHAT` | `qwen2.5:7b` | Chat model name. |
-| `OLLAMA_MODEL_EMBEDDING` | `yxchia/multilingual-e5-base` | Embedding model name. |
+| `LLM_EMBED_BASE_URL` | `http://localhost:11434/v1` | OpenAI-compatible embeddings endpoint. |
+| `LLM_EMBED_MODEL` | `yxchia/multilingual-e5-base` | Embedding model name. |
+| `LLM_ANSWER_BASE_URL` | `http://localhost:11434/v1` | OpenAI-compatible answers endpoint. |
+| `LLM_ANSWER_MODEL` | `qwen2.5:7b` | Answer model name. |
+| `LLM_ANSWER_API_KEY` | empty | API key for authenticated answer providers. |
 | `RAG_OVERWRITE_ENV` | `false` | Set to `true` to replace an existing env file. |
 
 ## Release Assets
